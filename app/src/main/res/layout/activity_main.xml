@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+ <TextView
+     android:text="加载中"
+     android:id="@+id/loading"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content">
+
+ </TextView>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="警告"
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="选择"
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="输入"
+        android:id="@+id/input_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+</LinearLayout>
