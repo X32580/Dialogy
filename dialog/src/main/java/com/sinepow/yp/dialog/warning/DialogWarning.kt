@@ -12,7 +12,7 @@ import com.sinepow.yp.dialog.R
  * 时间 :  2020/1/4 10:47
  * 邮箱 :  1632502697@qq.com
  * 简述 :  显示警告 提示
- * 更新 :
+ * 更新 :  加入适配java得接口
  * 时间 :
  */
 class DialogWarning(context: Context) :Dialog(context, R.style.DialogBackground){
@@ -21,6 +21,8 @@ class DialogWarning(context: Context) :Dialog(context, R.style.DialogBackground)
     var confirmTextView: TextView
     var titleTextView: TextView
     var isLister = false
+    var isClick = false
+    private lateinit var click: Click
 
     init {
         val view  = LayoutInflater.from(context).inflate(R.layout.dialog_overvoltage_warning,null)
@@ -31,6 +33,8 @@ class DialogWarning(context: Context) :Dialog(context, R.style.DialogBackground)
         confirmTextView.setOnClickListener { v ->
             if (isLister)
                 liseter(v)
+            if (isClick)
+                click.OnClick()
             dismiss()
         }
 
@@ -63,6 +67,17 @@ class DialogWarning(context: Context) :Dialog(context, R.style.DialogBackground)
         return this
     }
 
+    fun setClick(click: Click)  {
+        this.click = click
+        isClick =true
+        setCanceledOnTouchOutside(false)
+        setCancelable(false)
+        show()
+    }
+
+    interface Click{
+        fun OnClick()
+    }
 
 
 

@@ -12,18 +12,22 @@ import com.sinepow.yp.dialog.R
  * 时间 :  2019/12/10 9:55
  * 邮箱 :  1632502697@qq.com
  * 简述 :  自定义选择弹出框   没有测试 碎片中调用
- * 更新 :
+ * 更新 :  返回值修改为Boolean值 true 表示确认 false 表示取消
  * 时间 :
  */
 class DialogSelect(context: Context) : Dialog(context, R.style.DialogBackground) {
 
-    private lateinit var liseter: (View) -> Unit
+    private lateinit var liseter: (Boolean) -> Unit
     private  var v: View
       var confirmTextView: TextView
       var cancelTextView: TextView
       var titleTextView: TextView
       var contentTextView: TextView
       var isLister = false
+      var  isClick = false
+
+    private lateinit var click :OnClickLester
+
 
     init {
         v = LayoutInflater.from(context).inflate(R.layout.dialog_select, null)
@@ -34,12 +38,18 @@ class DialogSelect(context: Context) : Dialog(context, R.style.DialogBackground)
         contentTextView = v.findViewById(R.id.dialog_select_content)
 
         cancelTextView.setOnClickListener {
+            if (isLister)
+                liseter(false)
+            if (isClick)
+                click.onClick(false)
             dismiss()
         }
 
         confirmTextView.setOnClickListener { v ->
             if (isLister)
-            liseter(v)
+            liseter(true)
+            if (isClick)
+                click.onClick(false)
             dismiss()
         }
 
@@ -72,7 +82,7 @@ class DialogSelect(context: Context) : Dialog(context, R.style.DialogBackground)
     /**
      * 设置监听器  需注意设置监听器以后 自动显示 不设置监听器 需要手动显示
      */
-    fun setLister(l: (View) -> Unit) :DialogSelect {
+    fun setLister(l: (Boolean) -> Unit) :DialogSelect {
         liseter = l
         isLister =true
         setCanceledOnTouchOutside(false)
@@ -81,6 +91,19 @@ class DialogSelect(context: Context) : Dialog(context, R.style.DialogBackground)
         return this
     }
 
+    fun setClick(click:OnClickLester){
+        this.click = click
+        isClick =true
+        setCanceledOnTouchOutside(false)
+        setCancelable(false)
+        show()
+    }
+
+    interface OnClickLester{
+        fun onClick(isClick : Boolean){
+
+        }
+    }
 
 
 }

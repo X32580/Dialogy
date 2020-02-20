@@ -12,14 +12,15 @@ import com.sinepow.yp.dialog.R
  * 时间 :  2019/12/10 16:46
  * 邮箱 :  1632502697@qq.com
  * 简述 :  自定义弹出框 单输入控件
- * 更新 :
+ * 更新 :  加入java接口
  * 时间 :
  */
 class DialogEditOne(context: Context) : Dialog(context, R.style.DialogBackground){
 
     private lateinit var lister:(String) ->Unit
-
+    private lateinit var listerJ:ClickLister
     var isLister = false
+    var isListerJ = false
      var titleTextView:TextView
      var editText: EditText
     var confirmTextView: TextView
@@ -49,7 +50,16 @@ class DialogEditOne(context: Context) : Dialog(context, R.style.DialogBackground
                     Toast.makeText(context,"请输入内容",Toast.LENGTH_SHORT).show()
                 }
             }else{
-                dismiss()
+                if (isListerJ){
+                    if (editText.text != null){
+                        listerJ.click(editText.text.toString())
+                        dismiss()
+                    }else{
+                        Toast.makeText(context,"请输入内容",Toast.LENGTH_SHORT).show()
+                    }
+                }else{
+                    dismiss()
+                }
 
             }
 
@@ -84,6 +94,16 @@ class DialogEditOne(context: Context) : Dialog(context, R.style.DialogBackground
         lister = l
         isLister =true
         show()
+    }
+
+    fun setListerJ(lister: ClickLister){
+        listerJ = lister
+        isListerJ =true
+        show()
+    }
+
+    interface ClickLister{
+        fun click(input:String)
     }
 
 
