@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialog_background_radius_10"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dialog_radio_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/back"
+        android:textSize="16dp"></TextView>
+
+    <RadioGroup
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/dialog_battery_type_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/dialog_battery_type_radiobutton1"
+            android:textColor="@color/dialog_content_text_color"
+            android:drawableRight="@drawable/dialog_radio_button_selector"
+            android:button="@null"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </RadioButton>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_garry"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></TextView>
+
+        <RadioButton
+            android:id="@+id/dialog_battery_type_radiobutton2"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/dialog_content_text_color"
+            android:drawableRight="@drawable/dialog_radio_button_selector"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </RadioButton>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_garry"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></TextView>
+        <RadioButton
+            android:id="@+id/dialog_battery_type_radiobutton3"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/dialog_content_text_color"
+            android:drawableRight="@drawable/dialog_radio_button_selector"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </RadioButton>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_garry"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></TextView>
+
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dialog_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/dialog_button_confirm_background"
+        android:textSize="16dp">
+
+    </TextView>
+
+
+</LinearLayout>

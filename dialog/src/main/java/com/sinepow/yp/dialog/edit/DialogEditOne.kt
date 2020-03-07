@@ -96,7 +96,7 @@ class DialogEditOne(context: Context) : Dialog(context, R.style.DialogBackground
         show()
     }
 
-    fun setListerJ(lister: ClickLister){
+    fun setLister(lister: ClickLister){
         listerJ = lister
         isListerJ =true
         show()

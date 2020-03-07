@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialog_background_radius_10"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/back"
+        android:textSize="16dp"
+        android:id="@+id/dialog_junhen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/dialog_junhen_group"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/dialog_junhen_radio1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/dialog_content_text_color"
+            android:drawableRight="@drawable/dialog_radio_button_selector"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </RadioButton>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_garry"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></TextView>
+
+        <RadioButton
+            android:id="@+id/dialog_junhen_radio2"
+            android:text="专业均衡"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/dialog_content_text_color"
+            android:drawableRight="@drawable/dialog_radio_button_selector"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </RadioButton>
+        <TextView
+
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_garry"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></TextView>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/dialog_junhen_cancel"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/dialog_button_confirm_background"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+    </TextView>
+
+</LinearLayout>

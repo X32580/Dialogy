@@ -6,7 +6,6 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:text="警告"
         android:layout_gravity="center"
         android:textStyle="bold"
         android:layout_marginBottom="14dp"
@@ -14,15 +13,14 @@
         android:id="@+id/dialog_over_voltage_title"
         android:gravity="center"
         android:textColor="@color/text_panel_read"
-        android:textSize="14dp"
+        android:textSize="18dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content">
 
 
     </TextView>
     <TextView
-        android:text="我知道了"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/dialog_over_confirm"
         android:textSize="12dp"
         android:layout_marginBottom="16dp"
