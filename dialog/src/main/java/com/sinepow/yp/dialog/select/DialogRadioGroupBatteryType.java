@@ -111,6 +111,7 @@ public class DialogRadioGroupBatteryType extends Dialog {
 
     public DialogRadioGroupBatteryType setListener(onClickListener listener) {
         this.listener = listener;
+        show();
         return this;
     }
 

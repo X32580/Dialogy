@@ -40,6 +40,7 @@ public class DialogEditModifyPW extends Dialog {
 
     public DialogEditModifyPW setLister(onClickLister lister){
         this.lister = lister;
+        show();
         return  this;
     }
 

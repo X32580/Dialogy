@@ -45,6 +45,7 @@ public class DialogBatteryS extends Dialog {
 
     public DialogBatteryS setOnclickLisetr(onClickLister lisetr){
         this.lister = lisetr;
+        show();
         return this;
     }
 

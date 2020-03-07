@@ -109,6 +109,7 @@ public class DialogRadioGroupJunHen extends Dialog {
 
     public DialogRadioGroupJunHen setListener(onClickListener listener ){
         this.listener = listener;
+        show();
         return  this;
     }
 

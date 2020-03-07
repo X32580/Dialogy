@@ -103,6 +103,7 @@ public class DialogAutoTime extends Dialog {
 
     public DialogAutoTime setOnClick(onClickLister lister){
         this.lister = lister;
+        show();
         return this;
     }
 
