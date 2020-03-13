@@ -45,6 +45,6 @@ dependencies {
     //滑动选择器 单项
     implementation 'com.github.zyyoona7:wheelview:1.0.7'
     //滑动选择器多项
-    implementation 'com.github.zyyoona7:pickerview:1.0.9'
+    implementation "com.github.zyyoona7:pickerview:$pickerview"
 
 }

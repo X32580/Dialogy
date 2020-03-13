@@ -11,6 +11,7 @@ import com.sinepow.yp.dialog.loading.DialogLoading
 import com.sinepow.yp.dialog.select.DialogRadioGroupBatteryType
 import com.sinepow.yp.dialog.select.DialogRadioGroupJunHen
 import com.sinepow.yp.dialog.select.DialogSelect
+import com.sinepow.yp.dialog.tip.DialogText
 import com.sinepow.yp.dialog.warning.DialogWarning
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
@@ -114,6 +115,15 @@ class MainActivity : AppCompatActivity() {
                 .setOnClick { opt1, opt2 ->
 
                 }
+
+
+        }
+        val s = "16546111111111111111111123sdajo djoasj ladkjfs oaljdfm,nafdihnidae dasnfasnd fhasdfnasdfiasdnfaiswehjfoadsjflkasjdfkljasdlkf"
+
+        dialog_text_show.setOnClickListener {
+            DialogText(this,"协议内容",s).setLister {
+
+            }
 
 
         }
