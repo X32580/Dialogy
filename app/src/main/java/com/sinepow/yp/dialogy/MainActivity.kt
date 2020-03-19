@@ -12,6 +12,7 @@ import com.sinepow.yp.dialog.select.DialogRadioGroupBatteryType
 import com.sinepow.yp.dialog.select.DialogRadioGroupJunHen
 import com.sinepow.yp.dialog.select.DialogSelect
 import com.sinepow.yp.dialog.tip.DialogText
+import com.sinepow.yp.dialog.tip.DialogWebText
 import com.sinepow.yp.dialog.warning.DialogWarning
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
@@ -125,6 +126,17 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+
+        }
+
+        dialog_web_show.setOnClickListener {
+
+            DialogWebText(this,"https://www.jianshu.com/p/4564be81a108")
+                .setTitle("充充电协议")
+                .setLister {
+
+
+                }
 
         }
 

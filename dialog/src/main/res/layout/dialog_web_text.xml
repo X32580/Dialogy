@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialog_background_radius_10"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/back"
+        android:layout_marginTop="10dp"
+        android:id="@+id/dialog_web_title"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <WebView
+        android:id="@+id/dialog_web"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+    </WebView>
+
+    <TextView
+        android:background="@color/edit_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/dialog_web_confirm"
+        android:padding="10dp"
+        android:text="确认"
+        android:textSize="16dp"
+        android:textColor="@color/dialog_button_confirm_background"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </TextView>
+
+
+
+
+
+</LinearLayout>

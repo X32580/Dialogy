@@ -101,4 +101,16 @@
 
    </TextView>
 
+    <TextView
+        android:id="@+id/dialog_web_show"
+        android:layout_marginTop="20dp"
+        android:text="网页显示协议"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </TextView>
+
+
+
 </LinearLayout>
