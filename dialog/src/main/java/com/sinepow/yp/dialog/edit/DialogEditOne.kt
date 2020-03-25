@@ -43,7 +43,7 @@ class DialogEditOne(context: Context) : Dialog(context, R.style.DialogBackground
 
         confirmTextView.setOnClickListener {
             if (isLister){
-                if (editText.text != null){
+                if (editText.text != null&& editText.text.toString()!= ""){
                     lister(editText.text.toString())
                     dismiss()
                 }else{
@@ -51,7 +51,7 @@ class DialogEditOne(context: Context) : Dialog(context, R.style.DialogBackground
                 }
             }else{
                 if (isListerJ){
-                    if (editText.text != null){
+                    if (editText.text != null&& editText.text.toString()!= ""){
                         listerJ.click(editText.text.toString())
                         dismiss()
                     }else{

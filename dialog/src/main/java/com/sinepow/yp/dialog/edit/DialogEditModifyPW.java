@@ -106,7 +106,7 @@ public class DialogEditModifyPW extends Dialog {
             dismiss();
         });
         rightTv.setOnClickListener(v -> {
-            if (oldPW.getText().toString()!=null&&newPW.getText().toString()!=null&&canPW.getText().toString()!=null){
+            if (oldPW.getText().toString()!=""&&newPW.getText().toString()!=""&&canPW.getText().toString()!= ""){
                 if (newPW.getText().toString().equals(canPW.getText().toString())){
                     lister.click(oldPW.getText().toString().trim(),newPW.getText().toString().trim());
                     dismiss();
