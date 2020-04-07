@@ -49,7 +49,7 @@ class DialogSelect(context: Context) : Dialog(context, R.style.DialogBackground)
             if (isLister)
             liseter(true)
             if (isClick)
-                click.onClick(false)
+                click.onClick(true)
             dismiss()
         }
 
