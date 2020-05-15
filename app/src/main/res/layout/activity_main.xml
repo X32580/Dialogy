@@ -8,108 +8,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
- <TextView
-     android:text="加载中"
-     android:id="@+id/loading"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content">
+    <com.sinepow.yp.view.MyView
+        android:id="@+id/text1"
+        android:background="@color/text_color_gary"
+        android:layout_width="100dp"
+        android:layout_height="200dp">
 
- </TextView>
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="警告"
-        android:id="@+id/warning"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="选择"
-        android:id="@+id/select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="输入"
-        android:id="@+id/input_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="密码输入"
-        android:id="@+id/dialog_eidt_paaword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="双选择"
-        android:id="@+id/battery_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="三选择"
-        android:id="@+id/junhen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="单项选择"
-        android:id="@+id/where_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="双向选择器"
-        android:id="@+id/where_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-   <TextView
-       android:id="@+id/dialog_text_show"
-       android:layout_marginTop="20dp"
-       android:text="长文本显示"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content">
-
-
-   </TextView>
-
-    <TextView
-        android:id="@+id/dialog_web_show"
-        android:layout_marginTop="20dp"
-        android:text="网页显示协议"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-
-    </TextView>
+    </com.sinepow.yp.view.MyView>
 
 
 
