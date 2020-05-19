@@ -36,4 +36,13 @@
         <attr name="default_size" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="BatteryView">
+        <attr name="batteryColor" format="color"></attr>
+        <attr name="batteryWaveColor" format="color"></attr>
+        <attr name="prColor" format="color"></attr>
+    </declare-styleable>
+
+
+
+
 </resources>

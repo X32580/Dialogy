@@ -2,27 +2,33 @@ package com.sinepow.yp.view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.Nullable;
 
+
+import com.sinepow.yp.dialog.R;
+
+
 /**
  * 作者 :  叶鹏
  * 时间 :  2020/5/13 9:50
  * 邮箱 :  1632502697@qq.com
- * 简述 :  自定义view  显示电池剩余电量 demo
+ * 简述 :  自定义view  显示电池剩余电量
  * 更新 :
  * 时间 :
  * 版本 : V 1.0
  */
-public class MyView extends View {
+public class BatteryView extends View {
 
 
     //画笔
@@ -34,36 +40,41 @@ public class MyView extends View {
     private int dx;
 
 
-    public MyView(Context context) {
-        super(context);
-        init();
+    public BatteryView(Context context) {
+        super(context,null);
     }
 
-    public MyView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        init();
-
+    public BatteryView(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs,0);
     }
 
-    public MyView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public BatteryView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(context,attrs);
 
     }
 
 
-    private void init() {
+    private void init(Context context, AttributeSet attributeSet) {
+
+        TypedArray ty  = context.obtainStyledAttributes(attributeSet,R.styleable.BatteryView);
+
+        int batteryColor = ty.getColor(R.styleable.BatteryView_batteryColor, Color.BLUE);
+        int waveColo = ty.getColor(R.styleable.BatteryView_batteryWaveColor, Color.BLUE);
+        int textColor = ty.getColor(R.styleable.BatteryView_prColor, Color.GRAY);
+        ty.recycle();
+
         paint = new Paint();
-        paint.setColor(Color.BLUE);
+        paint.setColor(batteryColor);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(paintWidth);
         wavePaint = new Paint();
-        wavePaint.setColor(Color.BLUE);
+        wavePaint.setColor(waveColo);
         wavePaint.setStyle(Paint.Style.FILL);
         wavePaint.setStrokeWidth(paintWidth);
 
         textPaint =new Paint(Paint.ANTI_ALIAS_FLAG);
-        textPaint.setColor(Color.RED);
+        textPaint.setColor(textColor);
         textPaint.setTextSize(60f);
 
         mWaveDx = getResources().getDisplayMetrics().widthPixels;
@@ -109,7 +120,9 @@ public class MyView extends View {
         int width = getSize(100, widthMeasureSpec);
         int height = getSize(200, heightMeasureSpec);
 
+
         super.onMeasure(width, height);
+
 
         //设置测量尺寸
         setMeasuredDimension(width, height);
