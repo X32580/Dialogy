@@ -62,6 +62,8 @@ public class BatteryView extends View {
         int batteryColor = ty.getColor(R.styleable.BatteryView_batteryColor, Color.BLUE);
         int waveColo = ty.getColor(R.styleable.BatteryView_batteryWaveColor, Color.BLUE);
         int textColor = ty.getColor(R.styleable.BatteryView_prColor, Color.GRAY);
+        int pr = ty.getInteger(R.styleable.BatteryView_progress,50);
+
         ty.recycle();
 
         paint = new Paint();
@@ -77,8 +79,10 @@ public class BatteryView extends View {
         textPaint.setColor(textColor);
         textPaint.setTextSize(60f);
 
+
         mWaveDx = getResources().getDisplayMetrics().widthPixels;
 
+        setProgress(pr);
 
     }
 
