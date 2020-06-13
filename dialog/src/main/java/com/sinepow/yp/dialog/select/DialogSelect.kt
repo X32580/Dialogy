@@ -18,8 +18,8 @@ import com.sinepow.yp.dialog.R
 class DialogSelect(context: Context) : Dialog(context, R.style.DialogBackground) {
 
     private lateinit var liseter: (Boolean) -> Unit
-    private  var v: View
-      var confirmTextView: TextView
+    private  var v: View = LayoutInflater.from(context).inflate(R.layout.dialog_select, null)
+    var confirmTextView: TextView
       var cancelTextView: TextView
       var titleTextView: TextView
       var contentTextView: TextView
@@ -30,7 +30,6 @@ class DialogSelect(context: Context) : Dialog(context, R.style.DialogBackground)
 
 
     init {
-        v = LayoutInflater.from(context).inflate(R.layout.dialog_select, null)
 
         confirmTextView = v.findViewById(R.id.dialog_select_confirm)
         cancelTextView = v.findViewById(R.id.dialog_select_cancel)

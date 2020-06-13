@@ -8,14 +8,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
-
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
-
 import androidx.annotation.Nullable;
-
-
 import com.sinepow.yp.dialog.R;
 
 
@@ -86,6 +82,13 @@ public class BatteryView extends View {
 
     }
 
+
+    /**
+     * 测量 控件
+     * @param defaultSize
+     * @param measureSpec
+     * @return
+     */
     private int getSize(int defaultSize, int measureSpec) {
         int mySize = defaultSize;
 
@@ -232,8 +235,8 @@ public class BatteryView extends View {
 
 
 
-        batteryTop.left = 0 + paintWidth + getMeasuredWidth() / 4;
-        batteryTop.right = getMeasuredWidth() - paintWidth - getMeasuredWidth() / 4;
+        batteryTop.left = 0 + paintWidth + getMeasuredWidth() /4;
+        batteryTop.right = getMeasuredWidth() - paintWidth - getMeasuredWidth() /4;
         batteryTop.top = 0 + paintWidth;
         // 底部需要和下一个电池相交 不能减去 画笔的大小
         batteryTop.bottom = batteryRect.top;
@@ -242,7 +245,7 @@ public class BatteryView extends View {
         // 此时需要减去 外部描边的 大小
         batteryRect.set(batteryRect.left+paintWidth,batteryRect.top+paintWidth,batteryRect.right-paintWidth,batteryRect.bottom-paintWidth);
         //添加 电池主题 path
-        batteryPath.addRoundRect(batteryRect,batteryRound,batteryRound, Path.Direction.CW);
+        batteryPath.addRoundRect(batteryRect,batteryRound/2,batteryRound/2, Path.Direction.CW);
 
         //计算出电池的宽度高度
         batteryWidth = batteryRect.right - batteryRect.left;

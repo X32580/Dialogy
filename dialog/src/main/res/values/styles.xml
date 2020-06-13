@@ -37,12 +37,31 @@
     </declare-styleable>
 
     <declare-styleable name="BatteryView">
-        <attr name="progress" format="integer"></attr>
-        <attr name="batteryColor" format="color"></attr>
-        <attr name="batteryWaveColor" format="color"></attr>
-        <attr name="prColor" format="color"></attr>
+        <attr name="progress" format="integer" />
+        <attr name="batteryColor" format="color" />
+        <attr name="batteryWaveColor" format="color" />
+        <attr name="prColor" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="HeartView">
+        <attr name="heartBackground" format="color" />
+        <attr name="heartLoadColor" format="color" />
+        <attr name="heartSuccessfulColor" format="color" />
+        <attr name="heartBatteryColor" format="color"/>
+        <attr name="heartErrorColor" format="color" />
+        <attr name="heartHeight" format="dimension" />
+        <attr name="heartWidth" format="dimension" />
+        <attr name="heartPaintSize" format="dimension" />
+        <attr name="heartTextSize" format="dimension" />
+    </declare-styleable>
+
+   <declare-styleable name="LoadingView">
+       <attr name="errorColor" format="color" />
+       <attr name="successfulColor" format="color" />
+       <attr name="loadingColor" format="color" />
+       <attr name="strokeSize" format="dimension" />
+       <attr name="duration" format="integer" />
+   </declare-styleable>
 
 
 

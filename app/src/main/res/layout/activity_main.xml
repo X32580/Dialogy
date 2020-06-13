@@ -8,13 +8,47 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.sinepow.yp.view.MyView
+    <com.sinepow.yp.view.HeartView
         android:id="@+id/text1"
-        android:background="@color/text_color_gary"
-        android:layout_width="100dp"
-        android:layout_height="200dp">
+        android:background="@color/white"
+        app:heartBackground="@color/white"
+        app:heartBatteryColor="@color/bottom_bar_check_true"
+        app:heartErrorColor="@color/text_panel_read"
+        app:heartLoadColor="@color/text_color_gary"
+        app:heartSuccessfulColor="#8BC34A"
+        app:heartTextSize="14dp"
+        app:heartWidth="5dp"
+        app:heartHeight="8dp"
+        app:heartPaintSize="4dp"
+        android:layout_width="160dp"
+        android:layout_height="60dp">
 
-    </com.sinepow.yp.view.MyView>
+    </com.sinepow.yp.view.HeartView>
+    <Button
+        android:id="@+id/succeed"
+        android:text="成功"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <Button
+        android:id="@+id/error"
+        android:text="失败"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <com.sinepow.yp.view.LoadingView
+        app:duration="2000"
+        app:errorColor="@color/text_panel_read"
+        app:loadingColor="@color/text_color_gary"
+        app:strokeSize="2dp"
+        app:successfulColor="@color/bottom_bar_check_true"
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.sinepow.yp.view.LoadingView>
 
 
 
